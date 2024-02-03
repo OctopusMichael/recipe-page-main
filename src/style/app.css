@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+body {
+  font-family: "Young Serif", serif;
+}
+
+p,
+li {
+  font-family: "Outfit", sans-serif;
+}

@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+const ingredients = [
+  "2-3 large eggs",
+  "Salt, to taste",
+  "Pepper, to taste",
+  "1 tablespoon of butter or oil",
+  "Optional fillings: cheese, diced vegetables, cooked meats, herbs",
+];
+---
+
+<Layout title="Recipe page main">
+  <main class="bg-white md:my-[100px] max-w-[600px] mx-auto rounded-xl">
+    <header class="md:p-6">
+      <picture>
+        <img
+          class="w-full h-auto md:rounded-xl mb-4"
+          src="/images/image-omelette.jpeg"
+          alt="omelette"
+        />
+      </picture>
+    </header>
+    <section class="p-6">
+      <h1 class="text-black font-bold text-4xl">Simple Omelette Recipe</h1>
+      <p class="py-4 text-black">
+        An easy and quick dish, perfect for any meal. This classic omelette
+        combines beaten eggs cooked to perfection, optionally filled with your
+        choice of cheese, vegetables, or meats.
+      </p>
+      <div class="flex flex-col bg-rose px-7 py-4 rounded-xl">
+        <h2 class="text-darkBerry text-2xl font-bold">Preparation time</h2>
+        <ul class="list-disc p-5 flex flex-col gap-6">
+          <li>
+            <span class="text-black font-bold">Total</span> : Approximately 10 minutes
+          </li>
+          <li>
+            <span class="text-black font-bold">Preparation</span> : 5 minutes
+          </li>
+          <li>
+            <span class="text-black font-bold">Preparation</span> : 5 minutes
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col">
+        <h1 class="text-bold text-nut text-3xl font-bold mt-5">Ingredients</h1>
+        <ul class="list-disc p-5 gap-3 flex flex-col">
+          {ingredients.map((e) => <li class="">{e}</li>)}
+        </ul>
+        <hr />
+        <h1 class="text-bold text-nut text-3xl font-bold mt-5">Instructions</h1>
+        <ol class="list-decimal p-5 flex flex-col gap-3">
+          <li>
+            <span class="text-black font-bold">Beat the eggs:</span> In a bowl, beat
+            the eggs with a pinch of salt and pepper until they are well mixed. You
+            can add a tablespoon of water or milk for a fluffier texture.
+          </li>
+          <li>
+            <span class="font-bold text-black">Heat the pan:</span> Place a non-stick
+            frying pan over medium heat and add butter or oil.
+          </li>
+          <li>
+            <span class="font-bold text-black">Cook the omelette:</span>
+            Once the butter is melted and bubbling, pour in the eggs. Tilt the pan
+            to ensure the eggs evenly coat the surface.
+          </li>
+          <li>
+            <span class="font-bold text-black">Add fillings (optional):</span> When
+            the eggs begin to set at the edges but are still slightly runny in the
+            middle, sprinkle your chosen fillings over one half of the omelette.
+          </li>
+          <li>
+            <span class="font-bold text-black">Fold and serve:</span> As the omelette
+            continues to cook, carefully lift one edge and fold it over the fillings.
+            Let it cook for another minute, then slide it onto a plate.
+          </li>
+          <li>
+            <span class="font-bold text-black">Enjoy:</span> Serve hot, with additional
+            salt and pepper if needed.
+          </li>
+        </ol>
+        <hr />
+      </div>
+      <div class="flex flex-col">
+        <h1 class="text-bold text-nut text-3xl font-bold mt-5">Nutrition</h1>
+        <p class="mt-5">
+          The table below shows nutritional values per serving without the
+          additional fillings.
+        </p>
+
+        <table class="table-auto mt-5 h-[200px]">
+          <tbody class="">
+            <tr class="border-b border-gray-300">
+              <td>Calories</td>
+              <td class="text-nut font-bold">227kcal</td>
+            </tr>
+            <tr class="border-b border-gray-300">
+              <td>Carbs</td>
+              <td class="text-nut font-bold">0g</td>
+            </tr>
+            <tr class="border-b border-gray-300">
+              <td>Protein</td>
+              <td class="text-nut font-bold">20g</td>
+            </tr>
+            <tr class="">
+              <td>Fat</td>
+              <td class="text-nut font-bold">22g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</Layout>
